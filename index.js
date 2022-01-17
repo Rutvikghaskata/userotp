@@ -4,15 +4,15 @@ const express = require('express');
 const crypto = require('crypto');
 const cookieParser = require('cookie-parser');
 
-const accountSid = process.env.ACCOUNT_SID
-const authToken = process.env.AUTH_TOKEN
+const accountSid = 'AC8aab9d298e03539a3be2f07391db6921'
+const authToken = 'faa6c05080c4fc00ef0ea2bebe6ec9f8'
 const client = require('twilio')(accountSid, authToken)
 const jwt = require('jsonwebtoken');
 const res = require('express/lib/response');
-const JWT_AUTH_TOKEN = process.env.JWT_AUTH_TOKEN
-const JWT_REFRESH_TOKEN = process.env.JWT_REFRESH_TOKEN
+const JWT_AUTH_TOKEN = '33b5234e83b3ae354d3ca6b74f7494bfd267e91298f5a646f3608b658799c31fb756e5d679a9cd146b3d54d663355bdc176b8170b2e4c01a41f01c232109a3f7'
+const JWT_REFRESH_TOKEN = '1967a5a072b11c0b924ded410fac2782908dc7686e6356c9fce4da7a692cd402b206721b177d75d55d88f21f2f63b0b585f85732d5bd3ba8a316a3b5cd77b437'
 let refreshTokens = [];
-const smsKey = process.env.SMS_SECRET_KEY
+const smsKey ='b75a9f4e0df08a2189f2e61ee8d5a35b7fc1210020bcf4b1e7fbe9200bbe7d228769ab4fbdff199b881b01fd01ab61d78a8d58b1935bd2fcd6a6286c973ceba1'
 
 const app= express();
 app.use(express.json());
